@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="lh">
+      <!-- v-on:=== @ -->
+      <button v-on:click="isshow=!isshow">anwo</button>
+      <button @click="isshow1=!isshow1">anwo1</button>
+      <button @click="fn1">anwo2</button>
+      <button @click="fn2('ahaha')" v-text="text">anwo2</button>
+      <p v-show="isshow">onclick</p>
+      <p v-show="isshow1">@click</p>
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: '#lh',
+        data: {
+          text: 'anwo2',
+          isshow: true,
+          isshow1: true,
+        },
+        methods: {
+          fn1() {
+            this.isshow = !this.isshow
+          },
+          fn2(txt) {
+            this.text = txt
+          },
+        },
+      })
+    </script>
+  </body>
+</html>

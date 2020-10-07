@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="lh">
+      <img v-bind:src="imgSrc" v-bind:title="info" />
+      <img :src="imgsrc1" :title="info" />
+      <img :src="imgsrc1" :title="info" />
+      <img :src="imgsrc1" :title="info" />
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: '#lh',
+        data: {
+          imgSrc: '01.jpg',
+          imgsrc1: '00.gif',
+          info: '这是一张美女图片',
+        },
+        methods: {},
+      })
+    </script>
+  </body>
+</html>

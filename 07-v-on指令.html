@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="lh">
+      <!--       v-on:===@      -->
+      <button v-on:click="isshow=!isshow">nawo</button>
+      <button @click="isshow=!isshow">nawoasdada</button>
+      <button @click="fn1">nawoasdadaasdasdasda</button>
+      <button @click="fn2('lh')">????</button>
+      <button @mouseenter="fn3">hhhhh</button>
+      <h1 v-show="isshow">hhahahaahah</h1>
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: '#lh',
+        data: {
+          isshow: true,
+        },
+        methods: {
+          fn1() {
+            this.isshow = !this.isshow
+          },
+          fn2(name) {
+            console.log(name)
+          },
+          fn3() {
+            console.log('dmxy')
+          },
+        },
+      })
+      //methods methods methods methods methods methods methods
+    </script>
+  </body>
+</html>

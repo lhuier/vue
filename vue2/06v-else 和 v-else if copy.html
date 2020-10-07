@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="lh">
+      <p v-if="login">vipvipvip</p>
+      <p v-else>dnegludengludenglu</p>
+      <p v-if="age>60">gongyaun</p>
+      <p v-else-if="age>40">guangchang</p>
+      <p v-else-if="age>20">jiuba</p>
+      <p v-else>xiagu</p>
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: '#lh',
+        data: {
+          login: true,
+          age: 25,
+        },
+      })
+    </script>
+  </body>
+</html>
