@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">{{ msg }}</div>
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script>
+      // 使用:
+      // 1.下载 npm i axios
+      // 2.引包
+      // 3.发送请求
+      //   axios.get("http://localhost:3000/list").then((res) => {
+      //     console.log(res.data);
+      //   });
+      // axios.get("http://localhost:3000/list?name_like=车").then((res) => {
+      //   console.log(res.data);
+      // });
+      // axios
+      //   .post("http://localhost:3000/list", {
+      //     name: "缆车",
+      //     price: 1000,
+      //   })
+      //   .then((res) => {
+      //     console.log(res.data);
+      //   });
+      // const id = 5;
+      // axios.delete(`http://localhost:3000/list/${id}`).then((res) => {
+      //   console.log("删除成功");
+      // });
+
+      const id = 2;
+      axios
+        .patch(`http://localhost:3000/list/${id}`, {
+          name: "大菠萝",
+        })
+        .then((res) => {
+          console.log("修改成功");
+        });
+    </script>
+  </body>
+</html>

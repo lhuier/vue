@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">{{ msg }}</div>
+    <!-- 
+        axios  axios axios axios axios axios
+        axios({
+            method:  请求方式
+            url： 请求地址
+            data：{} 参数对象，在body请求体中传递，post put patch
+            params：{} 参数对象，在url地址栏中传递get delete
+        }).then（成功的函数）.catch(失败的函数)
+
+
+        axios({
+            method: 请求方式
+            url:请求地址
+            data:{} 参数对象，在body请求中传递  post put patch
+            params:{}参数对象 在url地址栏中传递 get delete
+        }).then(成功的函数).catch(失败的函数)
+
+
+        axios({
+            method: 请求方式
+            url： 请求地址
+            data：{} 参数对象 在body请求中传递
+            params：{} 参数对象 在url地址栏中传递
+        }).then(成功的函数).catch（失败的函数）
+     -->
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script>
+      //   axios({
+      //     mothod: "get",
+      //     url: "http://localhost:3000/list",
+      //   })
+      //     .then((res) => {
+      //       console.log(res.data);
+      //     })
+      //     .catch((err) => {
+      //       console.log(err);
+      //       alert("当前服务器繁忙，稍后重试");
+      //     });
+
+      //   axios({
+      //     mathod: "get",
+      //     url: "http://localhost:3000/list",
+      //     params: {
+      //       name_like: "车",
+      //     },
+      //   })
+      //     .then((res) => {
+      //       console.log(res.data);
+      //     })
+      //     .catch((err) => {
+      //       console.log(err);
+      //     });
+
+      axios({
+        method: "post",
+        url: "http://localhost:3000/list",
+        data: {
+          name: "大卡车",
+          price: 100,
+        },
+      })
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
